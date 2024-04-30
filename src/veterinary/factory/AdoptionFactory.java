@@ -16,9 +16,8 @@ public class AdoptionFactory {
 
         Pet selectedPet = selectPet(pets);
         Adopter selectedAdopter = selectAdopter(adopters);
-        Employee employee = new Employee("Andres", "Boss");
 
-        return new Adoption(selectedPet, selectedAdopter, employee);
+        return new Adoption(selectedPet, selectedAdopter, Employee.getInstance());
     }
 
     private static Pet selectPet(List<Pet> pets) {
