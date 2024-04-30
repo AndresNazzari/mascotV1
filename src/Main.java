@@ -1,9 +1,10 @@
 import veterinary.adoption.Adoption;
+import veterinary.factory.AdopterFactory;
 import veterinary.factory.AdoptionFactory;
+import veterinary.factory.PetFactory;
 import veterinary.person.Adopter;
 import veterinary.pet.Pet;
-import veterinary.factory.PetFactory;
-import veterinary.factory.AdopterFactory;
+
 import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,8 @@
 package veterinary.pet;
 
-import java.util.Date;
 import veterinary.pet.interfaces.IDog;
+
+import java.util.Date;
 
 public class Dog extends Pet implements IDog {
     private int walksPerDay;

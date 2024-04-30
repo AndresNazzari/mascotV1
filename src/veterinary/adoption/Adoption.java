@@ -1,10 +1,8 @@
 package veterinary.adoption;
 
-import veterinary.pet.Pet;
 import veterinary.person.Adopter;
 import veterinary.person.Employee;
-
-import javax.swing.*;
+import veterinary.pet.Pet;
 
 public class Adoption {
     private Employee employee;

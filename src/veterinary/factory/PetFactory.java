@@ -1,14 +1,14 @@
 package veterinary.factory;
 
+import veterinary.pet.Cat;
+import veterinary.pet.Dog;
+import veterinary.pet.Pet;
+
+import javax.swing.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import javax.swing.*;
-
-import veterinary.pet.Cat;
-import veterinary.pet.Dog;
-import veterinary.pet.Pet;
 
 public class PetFactory {
 
