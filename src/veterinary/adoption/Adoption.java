@@ -4,23 +4,27 @@ import veterinary.pet.Pet;
 import veterinary.person.Adopter;
 import veterinary.person.Employee;
 
+import javax.swing.*;
+
 public class Adoption {
     private Employee employee;
     private Adopter adopter;
     private Pet pet;
 
-    public Adoption(Employee employee, Adopter adopter, Pet pet) {
+    public Adoption(Pet pet, Adopter adopter, Employee employee) {
         this.setEmployee(employee);
         this.setAdopter(adopter);
         this.setPet(pet);
     }
 
-    public void printTicket() {
-        /*
-        System.out.println("----- Adoption Ticket -----");
-
-        System.out.println("------------------------------");
-        */
+    @Override
+    public String toString() {
+        return "----- Adoption Ticket -----\n" +
+                "Employee: " + employee.toString() + "\n" +
+                "Adopter: " + adopter.toString() + "\n" +
+                "Pet: " + pet.toString() + "\n" +
+                pet.getRecommendations() + "\n" +
+                "---------------------------";
     }
 
     public Employee getEmployee() {
