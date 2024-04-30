@@ -9,7 +9,7 @@ import javax.swing.*;
 import java.util.List;
 
 public class AdoptionFactory {
-    public static Adoption createAdoption (List<Pet> pets, List<Adopter> adopters) {
+    public static Adoption createAdoption(List<Pet> pets, List<Adopter> adopters) {
         if (pets.isEmpty() || adopters.isEmpty()) {
             throw new IllegalArgumentException("There are no pets or adopters available for adoption.");
         }
@@ -21,13 +21,13 @@ public class AdoptionFactory {
         return new Adoption(selectedPet, selectedAdopter, employee);
     }
 
-    private static Pet selectPet (List<Pet> pets) {
+    private static Pet selectPet(List<Pet> pets) {
         Object[] options = pets
                 .stream()
                 .map(pet -> pet.getSpecies() + ": " + pet.getName() + " (" + pet.getBreed() + ").")
                 .toArray();
 
-        String selectedOption = (String)  JOptionPane.showInputDialog(
+        String selectedOption = (String) JOptionPane.showInputDialog(
                 null,
                 "Select the pet for adoption:",
                 "Select Pet",

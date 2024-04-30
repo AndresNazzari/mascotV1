@@ -5,7 +5,7 @@ import veterinary.person.Adopter;
 import javax.swing.*;
 
 public class AdopterFactory {
-    public static Adopter createAdopter(){
+    public static Adopter createAdopter() {
         String name = JOptionPane.showInputDialog(null, "Enter the name of the adopter:", "Add Adopter", JOptionPane.QUESTION_MESSAGE);
         int age = getIntInput("Enter the age of the adopter:", "Add Adopter");
         String address = JOptionPane.showInputDialog(null, "Enter the address of the adopter:", "Add Adopter", JOptionPane.QUESTION_MESSAGE);

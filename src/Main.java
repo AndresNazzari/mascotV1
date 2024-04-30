@@ -16,7 +16,7 @@ public class Main {
     private static List<Adoption> adoptions = new ArrayList<>();
 
     public static void main(String[] args) {
-        List<String> menuOptions = List.of("Add Pet", "Add Adopter","Create Adoption", "Print Tickets", "Exit");
+        List<String> menuOptions = List.of("Add Pet", "Add Adopter", "Create Adoption", "Print Tickets", "Exit");
         List<String> petOptions = List.of("Dog", "Cat");
 
         while (true) {
@@ -58,7 +58,7 @@ public class Main {
         Adoption newAdoption = AdoptionFactory.createAdoption(pets, adopters);
         adoptions.add(newAdoption);
         pets.remove(newAdoption.getPet());
-        JOptionPane.showMessageDialog(null, "Adoption created:\n"+ newAdoption.toString(), "Adoption Created", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "Adoption created:\n" + newAdoption.toString(), "Adoption Created", JOptionPane.INFORMATION_MESSAGE);
     }
 
     private static void printTickets() {

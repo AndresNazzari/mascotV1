@@ -24,36 +24,55 @@ public abstract class Pet implements IPet {
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
+
     public Date getBirthDate() {
         return birthDate;
     }
+
     public void setBirthDate(Date birthDate) {
         this.birthDate = birthDate;
     }
+
     public double getWeight() {
         return weight;
     }
+
     public void setWeight(double weight) {
         this.weight = weight;
     }
-    public  int getVetVisits() {
+
+    public int getVetVisits() {
         return vetVisits;
     }
+
     public void setVetVisits(int vetVisits) {
         this.vetVisits = vetVisits;
     }
-    public String getSpecies() {return species;}
-    public void setSpecies(String species) {this.species = species;}
-    public String getBreed() {return breed;}
-    public void setBreed(String breed) {this.breed = breed;}
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public void setSpecies(String species) {
+        this.species = species;
+    }
+
+    public String getBreed() {
+        return breed;
+    }
+
+    public void setBreed(String breed) {
+        this.breed = breed;
+    }
 
     public String toString() {
         return this.getSpecies() + ", " + getBreed() + ":\n" +
                 "- Name: " + this.getName() + ".\n" +
-                "- Birthdate: " + this.getBirthDate()  +".\n" +
-                "- Weight: " + this.getWeight()  + " months.\n";
+                "- Birthdate: " + this.getBirthDate() + ".\n" +
+                "- Weight: " + this.getWeight() + " months.\n";
     }
 }

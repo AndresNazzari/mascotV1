@@ -13,24 +13,28 @@ public class Dog extends Pet implements IDog {
         this.setMealsPerDay(mealsPerDay);
         this.setWalksPerDay(walksPerDay);
     }
+
     public int getWalksPerDay() {
         return walksPerDay;
     }
+
     public void setWalksPerDay(int walksPerDay) {
         this.walksPerDay = walksPerDay;
     }
+
     public int getMealsPerDay() {
         return mealsPerDay;
     }
+
     public void setMealsPerDay(int mealsPerDay) {
         this.mealsPerDay = mealsPerDay;
     }
 
     @Override
     public String getRecommendations() {
-        return "Recommendations for caring for a " + this.getSpecies()+"\n" +
+        return "Recommendations for caring for a " + this.getSpecies() + "\n" +
                 "- Daily walks: " + this.getWalksPerDay() + ".\n" +
-                "- Meals per day: " + this.getMealsPerDay()  +".\n" +
-                "- Vet visits every " + this.getVetVisits()  + " months.\n";
+                "- Meals per day: " + this.getMealsPerDay() + ".\n" +
+                "- Vet visits every " + this.getVetVisits() + " months.\n";
     }
 }

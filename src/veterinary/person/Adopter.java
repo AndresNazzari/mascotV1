@@ -10,13 +10,24 @@ public class Adopter extends Person {
         this.setAddress(address);
     }
 
-    public int getAge() {return age;}
-    public void setAge(int age) {this.age = age;}
-    public String getAddress() {return address;}
-    public void setAddress(String address) {this.address = address;}
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "Adopter information: \n" +
                 "Name: " + this.getName() + ":\n" +
                 "Age: " + this.getAge() + ":\n" +
