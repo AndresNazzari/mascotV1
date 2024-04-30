@@ -3,16 +3,33 @@ package veterinary.pet;
 import java.util.Date;
 import veterinary.pet.interfaces.IDog;
 
-
 public class Dog extends Pet implements IDog {
-    public Dog(String name, Date birthDate, double weight) {
-        super(name, birthDate, weight);
+    private int walksPerDay;
+    private int mealsPerDay;
+
+    public Dog(String name, Date birthDate, double weight, int vetVisits, String species, String breed, int walksPerDay, int mealsPerDay) {
+        super(name, birthDate, weight, vetVisits, species, breed);
+        this.setMealsPerDay(mealsPerDay);
+        this.setWalksPerDay(walksPerDay);
     }
+    public int getWalksPerDay() {
+        return walksPerDay;
+    }
+    public void setWalksPerDay(int walksPerDay) {
+        this.walksPerDay = walksPerDay;
+    }
+    public int getMealsPerDay() {
+        return mealsPerDay;
+    }
+    public void setMealsPerDay(int mealsPerDay) {
+        this.mealsPerDay = mealsPerDay;
+    }
+
     @Override
-    public void getRecommendations() {
-        System.out.println("Recomendaciones para cuidar a un perro:");
-        System.out.println("- Paseos diarios.");
-        System.out.println("- Alimentación balanceada.");
-        System.out.println("- Visita al veterinario regularmente.");
+    public String getRecommendations() {
+        return "Recommendations for caring for a " + this.getSpecies()+"\n" +
+                "- Daily walks: " + this.getWalksPerDay() + ".\n" +
+                "- Meals per day: " + this.getMealsPerDay()  +".\n" +
+                "- Vet visits every " + this.getVetVisits()  + " months.\n";
     }
 }
