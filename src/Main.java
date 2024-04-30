@@ -66,16 +66,16 @@ public class Main {
             JOptionPane.showMessageDialog(null, "No adoptions have been made yet.", "No Adoptions", JOptionPane.INFORMATION_MESSAGE);
             return;
         }
-        StringBuilder tickets = new StringBuilder();
+
         for (Adoption adoption : adoptions) {
+            StringBuilder tickets = new StringBuilder();
             tickets.append("------------------------------\n");
             tickets.append("Adoption Ticket:\n");
             tickets.append("Pet: ").append(adoption.getPet().toString()).append("\n");
             tickets.append("Adopter: ").append(adoption.getAdopter().toString()).append("\n");
             tickets.append("Employee: ").append(adoption.getEmployee().toString()).append("\n");
             tickets.append("------------------------------\n");
+            JOptionPane.showMessageDialog(null, tickets.toString(), "Adoption Tickets", JOptionPane.INFORMATION_MESSAGE);
         }
-
-        JOptionPane.showMessageDialog(null, tickets.toString(), "Adoption Tickets", JOptionPane.INFORMATION_MESSAGE);
     }
 }
