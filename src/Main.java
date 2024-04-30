@@ -3,6 +3,7 @@ import veterinary.factory.AdopterFactory;
 import veterinary.factory.AdoptionFactory;
 import veterinary.factory.PetFactory;
 import veterinary.person.Adopter;
+import veterinary.person.Employee;
 import veterinary.pet.Pet;
 
 import javax.swing.*;
@@ -18,6 +19,7 @@ public class Main {
     public static void main(String[] args) {
         List<String> menuOptions = List.of("Add Pet", "Add Adopter", "Create Adoption", "Print Tickets", "Exit");
         List<String> petOptions = List.of("Dog", "Cat");
+        Employee.getInstance();
 
         while (true) {
             String selectedOption = (String) JOptionPane.showInputDialog(null, "Choose an option:", "Menu", JOptionPane.QUESTION_MESSAGE, null, menuOptions.toArray(), menuOptions.get(0));
@@ -37,6 +39,7 @@ public class Main {
             }
         }
     }
+
 
     private static void addPet(List<String> petOptions) {
         Pet newPet = PetFactory.createPet(petOptions);
